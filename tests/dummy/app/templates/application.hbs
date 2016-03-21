@@ -1,3 +1,28 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="fd_ui_body ember_way">
+	<div class="fd_ui_wrapper">
+		<div class="fd_header">
+			<div class="fd_header_title">Freshdesk UI Components</div>
+			<div class="fd_header_desc">Portable and Isolated Web Components</div>
+		</div>
+		<div class="fd_ui_contentholder">
+			<div class="fd_ui_componentslist">
+				<ul>
+					<li>{{#link-to "split-button-dropdown"}}Split Button Dropdown{{/link-to}}</li>
+					<li>{{#link-to "dependency-dropdown"}}Dependancy Dropdown{{/link-to}}</li>
+					<li>{{#link-to "multiple-input-selector"}}Multiple Input Selector{{/link-to}}</li>
+					<li>{{#link-to "split-button-dropdown"}}Tabs Default{{/link-to}}</li>
+					<li>{{#link-to "split-button-dropdown"}}Alphabet Filter{{/link-to}}</li>
+					<li>{{#link-to "split-button-dropdown"}}Menu Filter{{/link-to}}</li>
+					<li>{{#link-to "split-button-dropdown"}}File Uploader{{/link-to}}</li>
+					<li>{{#link-to "split-button-dropdown"}}Avatar Uploader{{/link-to}}</li>
+				</ul>
+			</div>
+			<div class="fd_ui_component_content">
+				<div class="fd_ui_com_holder">
+					{{outlet}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-{{outlet}}

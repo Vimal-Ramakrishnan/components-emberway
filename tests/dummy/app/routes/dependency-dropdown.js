@@ -1,0 +1,131 @@
+import Ember from 'ember';
+
+var data = [
+	{
+		id:0,
+		text:"..."
+	},
+	{
+		id:1,
+		text:"Category 1",
+		items:[
+			{
+				id:0,
+				text:"..."
+			},
+			{
+				id:1,
+				text:"1.1",
+				items:[
+					{
+						id:0,
+						text:"..."
+					},
+					{
+						id:"1.1.1",
+						text:"value_1.1.1",
+					},
+					{
+						id:"1.1.2",
+						text:"value_1.1.2",
+					},
+					{
+						id:"1.1.3",
+						text:"value_1.1.3",
+					}
+				]
+			},
+			{
+				id:2,
+				text:"1.2",
+				items:[
+					{
+						id:0,
+						text:"..."
+					},
+					{
+						id:"1.2.1",
+						text:"value_1.2.1",
+					},
+					{
+						id:"1.2.2",
+						text:"value_1.2.2",
+					},
+					{
+						id:"1.2.3",
+						text:"value_1.2.3",
+					}
+
+				]
+			}
+		]
+	},
+	{
+		id:2,
+		text:"Category 2",
+		items:[
+			{
+				id:0,
+				text:"..."
+			},
+			{
+				id:1,
+				text:"2.1",
+				items:[
+					{
+						id:0,
+						text:"..."
+					},
+					{
+						id:"2.1.1",
+						text:"value_2.1.1",
+					},
+					{
+						id:"2.1.2",
+						text:"value_2.1.2",
+					},
+					{
+						id:"2.1.3",
+						text:"value_2.1.3",
+					}
+				]
+			},
+			{
+				id:2,
+				text:"2.2",
+				items:[
+					{
+						id:0,
+						text:"..."
+					},
+					{
+						id:"2.2.1",
+						text:"value_2.2.1",
+					},
+					{
+						id:"2.2.2",
+						text:"value_2.2.2",
+					},
+					{
+						id:"2.2.3",
+						text:"value_2.2.3",
+					}
+
+				]
+			}
+		]
+	}
+];
+
+export default Ember.Route.extend({
+    category:null,
+    subcategory:null,
+    item:null,
+    category1:null,
+    subcategory1:null,
+    item1:null,
+	model() {
+		console.log(data);
+		return data;
+	},
+});

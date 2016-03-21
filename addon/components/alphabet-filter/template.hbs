@@ -1,0 +1,9 @@
+<div align="right" class="contacts_sub_header span9 pull-right" style="font-size:12px;border-bottom:0px;" >
+  <ul class="alpha_sort_list">
+    {{#each alphaFilterValues as |alpha|}}
+       <li id='{{alpha}}' class="first">
+         <a data-pjax="#body-container" {{action triggerSelect alpha}}>{{alpha}}</a>
+       </li>
+    {{/each}}
+  </ul>
+</div>

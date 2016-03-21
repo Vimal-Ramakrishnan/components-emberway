@@ -1,0 +1,10 @@
+<div style="margin-top:4px;margin-left:4px;" class="span3">
+    <div class="dropdown">
+        Showing: <a id="menulink" data-toggle="dropdown"></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            {{#each menuvalues as |alpha|}}
+            <li role="presentation"><a role="menuitem" tabindex="-1" {{action triggerSelect alpha.value alpha.label}} >{{alpha.label}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

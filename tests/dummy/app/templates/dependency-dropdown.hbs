@@ -1,0 +1,186 @@
+<div class="fd_com_split_button">
+	<div class="fd_com_header">
+		<h1>Dependency Dropdown</h1>
+	</div>
+	<div class="fd_com_content">
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Syntax</h4></div>	
+			<div class="fd_com_subcontent">
+				<div><code>&#123;&#123;dependency-dropdown</code></div>
+
+				<div><code>dependencyList=model</code></div>
+				
+				<div><code>primaryPlaceholder="Select user name"</code></div>
+				<div><code>searchOption=false</code></div>
+	
+				<div><code>subDropDown=false</code></div>
+				<div><code>subDropDownPlaceHolder="..."</code></div>
+		
+				<div><code>itemDropDown=false</code></div>
+				<div><code>itemDropDownPlaceHolder="..."</code></div>
+				
+				<div><code>value1=category</code></div>
+				<div><code>value2=subcategory</code></div>
+				<div><code>value3=item</code></div>
+
+				<div><code>label_category = ""</code></div>
+				<div><code>label_subcategory = ""</code></div>
+				<div><code>label_item = ""</code></div>
+				<div><code>returnvalue = "object"&#125;&#125;</code></div>
+			</div>
+		</div>
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Properties</h4></div>	
+			<div class="fd_com_subcontent">
+				<div class="fd_com_linebreak">
+				Model -> Array of objects which defines data input to the component</div>
+				<div class="fd_com_subcontent fd_com_linebreak">
+					<div class="fd_com_linebreak">
+<pre>
+eg : var model = [
+{
+	id:0,
+	text:"..."
+},
+{
+	id:1,
+	text:"Cateogry 1",
+	items:[
+		{
+			id:0,
+			text:"..."
+		},
+		{
+			id:1,
+			text:"1.1",
+			items:[
+				{
+					id:0,
+					text:"..."
+				},
+				{
+					id:"1.1.1",
+					text:"value_1.1.1",
+				},
+				{
+					id:"1.1.2",
+					text:"value_1.1.2",
+				},
+				{
+					id:"1.1.3",
+					text:"value_1.1.3",
+				}
+			]
+		},
+		{
+			id:2,
+			text:"1.2",
+			items:[
+				{
+					id:0,
+					text:"..."
+				},
+				{
+					id:"1.2.1",
+					text:"value_1.2.1",
+				},
+				{
+					id:"1.2.2",
+					text:"value_1.2.2",
+				},
+				{
+					id:"1.2.3",
+					text:"value_1.2.3",
+				}
+
+			]
+		}
+	]
+}
+]
+</pre>
+					</div>
+				</div>
+				<div class="fd_com_linebreak">searchOption [true / false] - > 
+					<br>
+					<div class="fd_com_subcontent">True : Will result in dropdown along with search box.</div>
+					<div class="fd_com_subcontent">False :  Will result in normal dropdown without search box</div>
+				</div> 
+				<div class="fd_com_linebreak">
+					subDropDown,itemDropDown ->
+					<div class="fd_com_subcontent"> By default, Dropdown 2 and Dropdown 3 will be in hidden state.</div> 
+					<div class="fd_com_subcontent">Dropdown(2,3) Based on Dropdown 1</div>
+				</div>
+				<div class="fd_com_linebreak">
+					category,subcategory,item -> 
+					<div class="fd_com_subcontent">Model(s) which holds the dropdown selection. Later we can use it in controller</div> 
+				</div>
+
+				<div class="fd_com_linebreak">
+					label_category,label_subcategory,label_item -> 
+					<div class="fd_com_subcontent">By default there are no labels, If needed we can specify it in mentioned above parameters.</div> 
+				</div>
+				<div class="fd_com_linebreak">
+					<div><b>returnvalue -></b></div>
+					<div class="fd_com_subcontent">If return value is <span><b>object</b></span> model will contain the result of selected <span><b>Object</b></span></div> 
+					<div class="fd_com_subcontent">If return value is <span><b>id</b></span> model will contain the result of selected <span><b>Object.ID</b></span></div> 
+				</div>
+			</div>
+		</div>
+		<div class="fd_com_subheader"><h4>Demo</h4></div>
+	
+	<div>Searh Option: True</div>
+	<div>returnValue: Object</div>
+	<div><b>Return Value -> </b> <span id="fd_callbackvalue1"><div>Dropdown 1 Selection Object : {{category}}</div><div>Dropdown 2 Selection Object : {{subcategory}}</div><div>Dropdown 3 Selection Object : {{item}}</div></span></div>
+	{{dependency-dropdown 
+
+		dependencyList=model 
+
+		primaryPlaceholder="Select user name"
+		searchOption=true
+
+		subDropDown=false
+		subDropDownPlaceHolder="..."
+
+		itemDropDown=false
+		itemDropDownPlaceHolder="..."
+
+		value1=category
+		value2=subcategory
+		value3=item
+
+		label_category = ""
+		label_subcategory = ""
+		label_item = ""
+
+		returnvalue = "object"
+	}}
+	<br>
+	<div>Searh Option: false</div>
+	<div>returnValue: Id</div>
+	<div><b>Return Value -></b> <span id="fd_callbackvalue1"><div>Dropdown 1 Selection ID : {{category1}}</div><div>Dropdown 2 Selection ID : {{subcategory1}}</div><div>Dropdown 3 Selection ID : {{item1}}</div></span></div>
+	{{dependency-dropdown 
+
+		dependencyList=model 
+
+		primaryPlaceholder="Select user name"
+		searchOption=false
+
+		subDropDown=false
+		subDropDownPlaceHolder="..."
+
+		itemDropDown=false
+		itemDropDownPlaceHolder="..."
+
+		value1=category1
+		value2=subcategory1
+		value3=item1
+
+		label_category = ""
+		label_subcategory = ""
+		label_item = ""
+
+		returnvalue = "id"
+	}}
+</div>
+</div>	

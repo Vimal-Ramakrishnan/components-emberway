@@ -1,0 +1,41 @@
+<div class="fd_com_split_button">
+	<div class="fd_com_header">
+		<h1>Split Button Dropdown</h1>
+	</div>
+	<div class="fd_com_content">
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Syntax</h4></div>	
+			<div class="fd_com_subcontent">
+				<code>&#123;&#123;split-button-dropdown defaultValue="Submit" subMenu=model ontrigger="doSubmitAction"&#125;&#125;</code>
+			</div>
+		</div>
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Properties</h4></div>	
+			<div class="fd_com_subcontent">
+				<div class="fd_com_linebreak">defaultValue -> ButtonName</div>
+				<div class="fd_com_linebreak">Model -> Array of objects which defines data input to the component</div>
+				<div class="fd_com_subcontent fd_com_linebreak">
+					<div class="fd_com_linebreak">
+						<pre>
+eg : var model = [
+	{
+		list_key:"sample_1",
+		list_value:"Create One"
+	},
+	{
+		list_key:"sample_2",
+		list_value:"Create Two"
+	},
+];
+						</pre>
+					</div>
+				</div>
+				<div class="fd_com_linebreak">ontrigger -> Action method which receives key as a callback value</div>
+				<div>Default submit button callback value is "default"</div>
+			</div>
+		</div>
+		<div class="fd_com_subheader"><h4>Demo</h4></div>
+		<div><b>Return Value: </b> <span id="fd_callbackvalue"></span></div>
+	</div>
+	{{split-button-dropdown defaultValue="Submit" subMenu=model ontrigger="doSubmitAction"}}
+</div>	

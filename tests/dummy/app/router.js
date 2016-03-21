@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('split-button-dropdown');
+	this.route('dependency-dropdown');
+	this.route('multiple-input-selector');
 });
 
 export default Router;

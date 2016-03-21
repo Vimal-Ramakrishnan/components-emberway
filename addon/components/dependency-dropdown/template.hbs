@@ -1,0 +1,51 @@
+<div class="app_dependency_dropdown">
+	<div class="caption_category dependent_component_label">{{label_category}}</div>
+	<div class="depedent_component_wrapper">
+		{{select-2
+		    content=dependencyList
+		    placeholder=primaryPlaceholder
+		    value=value1Data
+		    allowclear=true
+		    locked=true
+		    didSelect= 'dd_onTrigger'
+		    searchEnabled=searchOption
+		    dd_reference='category'
+		}}
+	</div>
+</div>
+<div class="app_dependent_dropdown_subcategories">
+	{{#if subCategory_Show_Hide}}
+		<div class="app_dependency_dropdown app_dependency_dropdown_sub">
+			<div class="caption_subcategory dependent_component_label">{{label_subcategory}}</div>
+			<div class="depedent_component_wrapper">
+				{{select-2
+				    content=subDropDown_DataBinding	    
+				    value=value2Data
+				    placeholder=subDropDownPlaceHolder
+				    allowclear=true
+				    locked=true
+				    searchEnabled=searchOption
+				    didSelect= 'dd_onTrigger'
+				    dd_reference='subcategory'
+				}}
+			</div>
+		</div>
+	{{/if}}
+	{{#if itemCategory_Show_Hide}}
+		<div class="app_dependency_dropdown app_dependency_dropdown_sub">
+			<div class="caption_item dependent_component_label">{{label_item}}</div>
+			<div class="depedent_component_wrapper">
+				{{select-2
+				    content=itemDropDown_DataBinding
+				    value=value3Data
+				    placeholder=itemDropDownPlaceHolder
+				    allowclear=true
+				    locked=true
+				    searchEnabled=searchOption
+				    dd_reference='item'
+				    didSelect= 'dd_onTrigger'
+				}}
+			</div>
+		</div>
+	{{/if}}
+</div>

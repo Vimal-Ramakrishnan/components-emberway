@@ -1,0 +1,9 @@
+<ul  class="{{options.ul_class}}">
+    {{#each dats as |tab|}}
+        {{#link-to tab.toroute tagName='li'  }}
+           {{#link-to atab.toroute  }}{{tab.label}}{{/link-to}}
+        {{/link-to}}
+    {{/each}}
+</ul>
+
+{{yield}}

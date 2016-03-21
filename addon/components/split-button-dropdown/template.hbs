@@ -1,0 +1,14 @@
+<div class="app_splitbutton_dd" style="margin:40px;">
+	<div class="btn-group">
+	<button type="button" class="btn btn-default" {{action "initiateCallback" "default"}}>{{defaultValue}}</button>
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+		</button>
+		<ul class="dropdown-menu">
+			{{#each subMenu as |sub_list|}}
+				<li><a {{action "initiateCallback" sub_list.list_key}}>{{sub_list.list_value}}</a></li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
