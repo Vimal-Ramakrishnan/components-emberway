@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-fduicomponents'
+  name: 'ember-fduicomponents',
+   included: function(app) {
+    app.import('vendor/css/file-upload.css');
+  }
 };

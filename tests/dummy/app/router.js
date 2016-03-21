@@ -9,6 +9,8 @@ Router.map(function() {
 	this.route('split-button-dropdown');
 	this.route('dependency-dropdown');
 	this.route('multiple-input-selector');
+  this.route('file-attachment');
+  this.route('avatar-upload');
 });
 
 export default Router;

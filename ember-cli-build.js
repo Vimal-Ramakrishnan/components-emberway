@@ -6,7 +6,10 @@ module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     // Add options here
   });
-app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('vendor/css/file-upload.css');
+  app.import("bower_components/jquery-file-upload/js/vendor/jquery.ui.widget.js");
+  app.import("bower_components/jquery-file-upload/js/jquery.fileupload.js");
   /*
     This build file specifies the options for the dummy test app of this
     addon, located in `/tests/dummy`

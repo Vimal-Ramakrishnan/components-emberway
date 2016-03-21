@@ -1,0 +1,40 @@
+{{yield}}
+<div class="container">
+<div class='attach'>
+{{#if error}}
+<div class="alert alert-danger">
+<a><i><span class="fa fa-close close-icon"{{action 'removeError'}}></span></i></a>
+{{error}}
+ </div>
+{{/if}}
+{{#if files}}
+
+{{#each files as |file index|}}
+<div class='item'>
+<span class="glyphicon glyphicon-remove"{{action 'removeFile' file}}></span>
+{{file.name}} ( {{file.fileSize}} )
+</div>
+{{/each}}
+{{/if}}
+</div>
+<div class="upload-container">
+{{file-upload
+  url=url
+  multiple=multiple
+  upload=upload
+  accepts=accepts
+  onFileUploadAdd='onFileUploadAdd'
+  onFileUploadChange=onFileUploadChange
+  onFileUploadSuccess='onFileUploadSuccess'
+  onFail='onFail'
+  error= 'error'
+  allowSize=allowSize
+  tabindex='-1'}}
+  <input type="button" class="btn btn-default button" value="+ Attach a File">
+{{!--   <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div> --}}
+</div>
+</div>
