@@ -1,0 +1,41 @@
+<div class="fd_com_split_button">
+  <div class="fd_com_header">
+    <h1>Avatar Upload</h1>
+  </div>
+  <div class="fd_com_content">
+    <div class="fd_com_sytax fd_com_block">
+      <div class="fd_com_subheader"><h4>Component Syntax :</h4></div>
+      <div class="fd_com_subcontent">
+        <code>&#123;&#123;avatar-upload
+        upload='true'
+        url='/avatar'
+        width='500'
+        height='500'
+        preview=true&#125;&#125;</code>
+      </div>
+    </div>
+    <div class="fd_com_sytax fd_com_block">
+      <div class="fd_com_subheader"><h4>Component Properties :</h4></div>
+      <div class="fd_com_subcontent">
+        <div class="fd_com_linebreak">upload = (true/false) when true the files will be uploaded to the server</div>
+        <div class="fd_com_linebreak">url = the url end point to which the file to be uploaded</div>
+        <div class="fd_com_linebreak">allowSize = the size of the files to be uploaded, default size per file is 5 MB</div>
+        <div class="fd_com_linebreak">preview = (true/false) when true, image preview will be shown.</div>
+        <div class="fd_com_linebreak">width =  width of the preview image, Default width is 500px.</div>
+        <div class="fd_com_linebreak">height = height of the preview image, Default height is 500px.</div>
+        <div class="fd_com_linebreak">onFileUploadSuccess = action to the parent, to handle when the file upload is successful</div>
+        <div class="fd_com_linebreak">onFail = action to the parent, to handle when the file upload failed</div>
+        <div class="fd_com_linebreak">allowSizeError = Custom error, to be shown in case the file size is exceeded.</div>
+      </div>
+    </div>
+    <div class="fd_com_subheader"><h4>Demo :</h4></div>
+  </div>
+  {{avatar-upload
+  url=url
+  preview=true
+  width='500'
+  height='500'
+  upload=false
+  allowSize=allowSize
+  }}
+</div>

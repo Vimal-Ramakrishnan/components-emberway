@@ -12,6 +12,8 @@ Router.map(function() {
 	this.route('tabs-default');
 	this.route('menu-filter');
 	this.route('alphabet-filter');
+  	this.route('file-attachment');
+  	this.route('avatar-upload');
 });
 
 export default Router;

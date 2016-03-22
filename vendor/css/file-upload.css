@@ -1,84 +1,84 @@
 h1 {
-	padding: 0px;
-	margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 .fd_ui_body {
-	margin:0px;
-	padding: 0px;
-	background: #f8f8f8;
-	height: 100%;
-	width: 100%;
+  margin:0px;
+  padding: 0px;
+  background: #f8f8f8;
+  height: 100%;
+  width: 100%;
 }
 .fd_ui_wrapper {
-	max-width: 1200px;
-	background: #fff;
-	min-height: 600px;
-	margin:0 auto;
+  max-width: 1200px;
+  background: #fff;
+  min-height: 600px;
+  margin:0 auto;
 }
 .fd_header {
-	width: 100%;
-	background:#16a085;
-	color:#FFF;
-	padding:15px 0px 15px 25px;
+  width: 100%;
+  background:#16a085;
+  color:#FFF;
+  padding:15px 0px 15px 25px;
 }
 .fd_header_title {
-	font-size: 23px;
+  font-size: 23px;
 }
 .fd_header_desc {
-	font-size: 12px;
-	margin-top:2px;
+  font-size: 12px;
+  margin-top:2px;
 }
 .fd_ui_contentholder {
-	position: relative;
+  position: relative;
 }
 .fd_ui_componentslist {
-	width: 250px;
-	padding: 20px 20px 20px 0px;
+  width: 250px;
+  padding: 20px 20px 20px 0px;
 }
 .fd_ui_componentslist ul li {
-	margin-bottom: 7px;
-	color:#05674b;
-	padding-left: 10px;
+  margin-bottom: 7px;
+  color:#05674b;
+  padding-left: 10px;
 }
 .fd_ui_componentslist a,.fd_ui_componentslist a:active,.fd_ui_componentslist a:visited {
 color:#05674b;
 }
 .fd_ui_component_content {
-	position: absolute;
+  position: absolute;
     top: 0px;
     bottom: 0;
     right: 0;
     left: 250px;
 }
 .fd_ui_com_holder {
-	padding: 10px 25px;
-	position: relative;
-	border-left: 1px solid #d3d3d3;
-	min-height: 700px;
+  padding: 10px 25px;
+  position: relative;
+  border-left: 1px solid #d3d3d3;
+  min-height: 700px;
 }
 .fd_com_header {
-	border-bottom: 1px solid #d3d3d3;
-	color:#05674b;
-	padding: 15px 20px 20px 0px;
-	margin-bottom: 15px;
+  border-bottom: 1px solid #d3d3d3;
+  color:#05674b;
+  padding: 15px 20px 20px 0px;
+  margin-bottom: 15px;
 }
 .fd_com_content {
-	color:#05674b;
+  color:#05674b;
 }
 .fd_com_block {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 .fd_com_subheader {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .fd_com_subcontent {
-	margin-left: 50px;
+  margin-left: 50px;
 }
 code {
 color:#05674b;
 }
 .fd_com_linebreak {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -121,52 +121,14 @@ margin-top: -1px;
 transform: scale(0);
 }
 .input_tager {
-	display: inline-block;
-}
-<<<<<<< HEAD
-/*Below the css style is for TABS DEFAULT component*/
-ul.header-tabs {
-  list-style: none;
-}
-ul.header-tabs li {
-  float: left;
-  position: relative;
-  padding-top: 1px;
-  background: #ccc;
-}
-ul.header-tabs li a {
-  position: relative;
-  z-index: 5;
-  text-decoration: none;
-  color: #ffffff;
-  text-align: center;
-  display: block;
-  padding: 8px 20px;
-  font-size: 13px;
-  font-weight: 500;
-}
-ul.header-tabs li a:hover {
-  background: #009196;
-}
-ul.header-tabs li.active a, ul.header-tabs li.active a:hover {
-  border-color: #002f30;
-  background: #fff;
-  color: #000000;
-}
-/* Styles for alphabet filter*/
-.alphabet_filter_holder li {
-	display: inline-block;
+  display: inline-block;
 }
 
 
-
-//abid css
+//file-attachment, avatar-upload css
 
   .button{
-    position: relative;
-    width:120px;
-    border:none;
-    background-color:#fafafa;
+
   }
   .button:hover{
     background-color:#fafafa;
@@ -248,6 +210,7 @@ ul.header-tabs li.active a, ul.header-tabs li.active a:hover {
   background-color:#fafafa;
   position:relative;
   width:120px;
+  border:none;
 }
 .attach-button:hover {  background-color: #fafafa }
 .spinner .bounce1 {
@@ -274,4 +237,3 @@ ul.header-tabs li.active a, ul.header-tabs li.active a:hover {
     transform: scale(1.0);
   }
 }
-

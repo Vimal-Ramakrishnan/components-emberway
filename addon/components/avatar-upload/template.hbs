@@ -1,0 +1,32 @@
+  {{yield}}
+  <div class="container">
+    <div class="attach">
+      {{#if errorMessage}}
+      <div class="alert alert-danger">
+        <a><i><span class="glyphicon glyphicon-remove"{{action 'removeError'}}></span></i></a>
+        {{errorMessage}}
+      </div>
+      {{/if}}
+      {{#if image}}
+        <img src={{image}} width =  {{width}} height = {{height}} class="image">
+      {{/if}}
+    </div>
+  <div class="upload-container">
+  {{file-upload url=url
+    preview=preview
+    previewImage='previewImage'
+    accepts=accepts
+    onFileUploadAdd='onFileUploadAdd'
+    onFileUploadSuccess=onFileUploadSuccess
+    onFail=onFail
+    acceptFileTypes=acceptFileTypes
+    allowSize=allowSize
+    upload=upload
+    error = 'error'
+    tabindex='-1'}}
+  <input type="button" class="btn btn-default attach-button" value="Upload Image">
+  </div>
+  </div>
+
+
+

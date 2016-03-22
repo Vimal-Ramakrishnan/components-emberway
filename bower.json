@@ -4,8 +4,11 @@
     "ember": "~2.4.1",
     "ember-cli-shims": "0.1.0",
     "ember-cli-test-loader": "0.2.2",
+    "jquery": "2.2.2",
+    "jquery-file-upload": "9.10.0",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap": "~3.3.5",
+    "font-awesome": "~4.5.0",
     "select2": "3.5.2"
   }
 }
