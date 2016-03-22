@@ -208,6 +208,13 @@ transform: scale(0);
 .glyphicon-remove{
   color:#999999 ;
 }
+.attach-button{
+  border:none;
+  background-color:#fafafa;
+  position:relative;
+  width:120px;
+}
+.attach-button:hover {  background-color: #fafafa }
 .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;

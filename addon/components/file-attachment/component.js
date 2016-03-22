@@ -12,7 +12,7 @@ export default Ember.Component.extend({
   length: null,
   multiple: true,
   upload: false,
-  allowSize: 5 * 1024 * 1024,
+  allowSize: 15 * 1024 * 1024,
   progress: 0,
   allowSizeError: 'Maximum file upload size limit reached, File cannot be uploaded',
   acceptFileTypesError:'Not an accepted file type',
@@ -33,6 +33,8 @@ export default Ember.Component.extend({
       x.fileSize = fileSize;
       });
       $this.get('files').pushObject(...data);
+      $this.sendAction('allFiles', $this.get('files'));
+
     },
 
     removeFile: function(data){
