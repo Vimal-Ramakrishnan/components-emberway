@@ -1,0 +1,40 @@
+<div id="fd-maintabs">
+    <div class="fd_com_header">
+        <h1>Tabs Default</h1>
+    </div>
+    <div class="fd_com_content">
+        <div class="fd_com_sytax fd_com_block">
+            <div class="fd_com_subheader"><h4>Component Syntax</h4></div>   
+            <div class="fd_com_subcontent">
+                <code>&#123;&#123;tabs-default  model.maintabs model.maintabs_opts&#125;&#125;</code>
+            </div>
+        </div>
+        <div class="fd_com_sytax fd_com_block">
+            <div class="fd_com_subheader"><h4>Component Properties</h4></div>   
+            <div class="fd_com_subcontent">
+                <div class="fd_com_linebreak">Model -> Array of objects which contains tab-data and class name for the parent[CSS styling]</div>
+                <div class="fd_com_subcontent fd_com_linebreak">
+                    <div class="fd_com_linebreak">
+<pre>
+maintabs:[
+    {label:"Dashboard",toroute:"routeName", disabled:false },
+    {label:"Tickets",toroute:"routeName",disabled:false},
+    {label:"Social",toroute:"routeName",disabled:false},
+    {label:"Solutions",toroute:"routeName",disabled:false},
+    {label:"Forums",toroute:"routeName",disabled:false},
+    {label:"Customers",toroute:"routeName",disabled:false},
+    {label:"Reports",toroute:"routeName",disabled:false},
+    {label:"Admin",toroute:"routeName",disabled:false}
+],
+maintabs_opts: {
+    ul_class:"header-tabs"
+},
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fd_com_subheader"><h4>Demo</h4></div>
+         {{tabs-default  model.maintabs model.maintabs_opts}}
+    </div>  
+</div> 

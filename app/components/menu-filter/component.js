@@ -1,0 +1,1 @@
+export { default } from 'ember-fduicomponents/components/menu-filter/component';
