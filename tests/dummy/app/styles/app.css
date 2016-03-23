@@ -110,7 +110,7 @@
     width:90px;
   }
   .container{
-    width: 532px;
+    width: 100%;
     border-radius: 5px;
     border:1px solid #fafafa;
     padding-left:0px;
@@ -165,9 +165,18 @@
   }
   .failed{
     color:red;
+
   }
+  span.message{
+    margin-left: 10%;
+  }
+
   .input-container{
     position:relative;
+  }
+  .alert{
+    margin-left:100px;
+    padding:5px;
   }
 
 

@@ -53,7 +53,7 @@ export default Ember.Component.extend({
       this.get('files').pushObject(...data.files);
       this.set('deleteUrl', data.files[0].deleteUrl);
       if(this.get('files').length>0){
-        this.set('uploadComplete', false);
+        this.set('uploadComplete', true);
         this.set('uploadFailed', false);
       }
     },
@@ -89,12 +89,6 @@ export default Ember.Component.extend({
       }
       else{
         this.set('uploading', false);
-      }
-      if(progress === 100){
-        this.set('uploadComplete', true);
-
-      }else{
-        this.set('uploadComplete', false);
       }
 
     }
