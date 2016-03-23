@@ -1,21 +1,13 @@
 {{yield}}
 <div class="container">
   <div class='attach'>
-    {{#if error}}
-    <div class="alert alert-danger">
-      <a><i><span class="glyphicon glyphicon-remove"{{action 'removeError'}}></span></i></a>
-      {{error}}
-    </div>
-    {{/if}}
-
-    {{#if files}}
     {{#each files as |file|}}
     <div class='item'>
       <a><i><span class="glyphicon glyphicon-remove"{{action 'removeFile' file}}></span></i></a>
       {{file.name}} ( {{file.fileSize}} )
     </div>
     {{/each}}
-    {{/if}}
+
   </div>
   <div class="upload-container">
     {{file-upload
@@ -26,11 +18,31 @@
     onFileUploadAdd='onFileUploadAdd'
     onFileUploadChange=onFileUploadChange
     onFileUploadSuccess=onFileUploadSuccess
-    onFail=onFail
-    error= 'error'
+    onFail='onFail'
+    error='error'
+    progressBar='progressBar'
     allowSize=allowSize
+    acceptFileTypes=acceptFileTypes
     tabindex='-1'}}
-    <input type="button" class="btn btn-default attach-button" value="+ Attach a File">
+    <a href='javascript:;'>
+    <span>+ Attach a File</span>
+    </a>
+    {{#if uploading}}
+    <span class="success">  Uploading..({{progress}}%)</span>
+    {{/if}}
+    {{#if uploadComplete}}
+    <span class="success">  Success <i class='glyphicon glyphicon-ok-circle'></i></span>
+    {{/if}}
+    {{#if uploadFailed}}
+    <span class="failed"> Upload Failed <i class='glyphicon glyphicon-exclamation-sign'></i></span>
+    {{/if}}
+    {{#if error}}
+    <span class="failed">
+       {{error}}
+      <i class="glyphicon glyphicon-remove-circle"{{action 'removeError'}}></i>
+
+    </span>
+    {{/if}}
   </div>
 </div>
 

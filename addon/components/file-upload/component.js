@@ -6,6 +6,7 @@ export default Ember.TextField.extend({
   attributeBindings: ['name', 'multiple', 'accepts'],
   classNames: ['btn-upload-file'],
   fileUploadType: 'POST',
+  paramName: 'file',
   type: 'file',
   url: '/attachment',
   multiple: null,
@@ -16,8 +17,8 @@ export default Ember.TextField.extend({
   acceptFileTypesError:'Not an accepted file type',
   preview: false,
   previewBase64: null,
-  didInsertElement: function(){
 
+  didInsertElement: function(){
     var $this = this;
 
     this.$().fileupload({
@@ -33,6 +34,7 @@ export default Ember.TextField.extend({
       change: function(e, data) {
         var acceptFileTypes = $this.get('acceptFileTypes');
         var filetypeError = $this.get('acceptFileTypesError');
+
         // file type validation
         if(acceptFileTypes !== null) {
           var notAcceptedTypes = [];
@@ -49,12 +51,13 @@ export default Ember.TextField.extend({
         }
 
         //file size validation
-        if($this.get('allowSize') !== null) {
+        if($this.allowSize !== null) {
           var totalSize = 0;
            data.files.forEach(function(e){
             totalSize += e.size;
           });
           if(totalSize > $this.allowSize) {
+            console.log('allowsize error');
             $this.sendAction('error', $this.allowSizeError);
             return false;
           }
@@ -69,6 +72,7 @@ export default Ember.TextField.extend({
         }
         $this.sendAction('onFileUploadAdd', data.files);
         if($this.get('upload')){
+
           data.submit()
           .success(function(result, status, xhr) {
             $this.sendAction('onFileUploadSuccess', result, status, xhr);
