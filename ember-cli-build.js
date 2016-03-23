@@ -8,6 +8,8 @@ module.exports = function(defaults) {
   });
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('vendor/css/file-upload.css');
+  app.import('vendor/css/multiple-input-selector.css');
+  app.import('vendor/css/alphabet-filter.css');
   app.import("bower_components/jquery-file-upload/js/vendor/jquery.ui.widget.js");
   app.import("bower_components/jquery-file-upload/js/jquery.fileupload.js");
   /*

@@ -1,0 +1,1 @@
+export { default } from 'ember-fduicomponents/components/alphabet-filter/component';

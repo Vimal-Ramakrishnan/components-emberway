@@ -1,0 +1,27 @@
+ul.header-tabs {
+  list-style: none;
+}
+ul.header-tabs li {
+  float: left;
+  position: relative;
+  background: #006063;
+}
+ul.header-tabs li a {
+  position: relative;
+  z-index: 5;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+ul.header-tabs li a:hover {
+  background: #009196;
+}
+ul.header-tabs li.active a, ul.header-tabs li.active a:hover {
+  border-color: #002f30;
+  background: #fff;
+  color: #000000;
+}

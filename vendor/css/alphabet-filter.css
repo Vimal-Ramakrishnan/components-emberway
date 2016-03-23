@@ -1,0 +1,24 @@
+.alpha_sort_list{
+display: inline-block;
+list-style: none;
+display: block;
+background: #fff;
+}
+.alpha_sort_list li {
+float: left;
+}
+.alpha_sort_list li a{
+font-weight: bold;
+text-decoration: none;
+color: #909090;
+padding: 0 4px 0 4px;
+margin-left: 2px;
+}
+.alpha_sort_list li a:hover {
+background: #ccc;
+color: #333;
+}
+.alpha_sort_list li.active a{
+background: #888;
+color: #FFF; 
+}

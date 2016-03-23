@@ -1,0 +1,43 @@
+<div class="fd_com_split_button">
+	<div class="fd_com_header">
+		<h1>Alphabet Filter</h1>
+	</div>
+	<div class="fd_com_content">
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Syntax</h4></div>	
+			<div class="fd_com_subcontent">
+				<code>&#123;&#123;alphabet-filter onselectfilter='setAlfaFilter' selected=alfaFilter&#125;&#125;</code>
+			</div>
+		</div>
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Properties</h4></div>	
+			<div class="fd_com_subcontent">
+				<div class="fd_com_linebreak">Model -> Array of objects which defines data input to the component</div>
+				<div class="fd_com_subcontent fd_com_linebreak">
+					<div class="fd_com_linebreak">
+						<pre>
+Controller
+===========
+alfaFilter:  "All",
+actions: {
+	setAlfaFilter: function(value) {
+		console.log("check this value",value);
+	},
+},
+model() {
+	return this.alfaFilter;
+}
+						</pre>
+					</div>
+				</div>
+				<div class="fd_com_linebreak">onselectfilter -> Action method which receives selected menu as callback value</div>
+			</div>
+		</div>
+		<div class="fd_com_subheader"><h4>Demo</h4></div>
+		<div><b>Return Value: </b> <span id="fd_callbackvalue"></span></div>
+		<br>
+	</div>
+	<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
+  		{{alphabet-filter onselectfilter='setAlfaFilter' selected=alfaFilter }}
+	</div>
+</div>	

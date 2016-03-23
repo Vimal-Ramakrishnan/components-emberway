@@ -1,0 +1,45 @@
+<div class="fd_com_split_button">
+	<div class="fd_com_header">
+		<h1>Menu Filter</h1>
+	</div>
+	<div class="fd_com_content">
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Syntax</h4></div>	
+			<div class="fd_com_subcontent">
+				<code>&#123;&#123;menu-filter menuvalues=model.stateFilterValues onselectfilter='setStateFilter' selected=model.stateFilerLabel&#125;&#125;</code>
+			</div>
+		</div>
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Properties</h4></div>	
+			<div class="fd_com_subcontent">
+				<div class="fd_com_linebreak">Model -> Array of objects which defines data input to the component</div>
+				<div class="fd_com_subcontent fd_com_linebreak">
+					<div class="fd_com_linebreak">
+						<pre>
+stateFilterValues:[{label:"Verified",value:"verified"},{label:"Unverified",value:"unverified"},{label:"All",value:"all"},{label:"Deleted",value:"deleted"},{label:"Blocked",value:"blocked"}],
+
+stateFilerLabel: Ember.computed("stateFilter",function(){
+var array=this.stateFilterValues,len=array.length,filterValue=this.stateFilter,resul=null;
+for(var i=0;i&#60;len;i++){
+	if(array[i].value==filterValue) {
+		resul=array[i];
+		break;
+	}
+}
+return resul?resul.label:filterValue;
+});
+						</pre>
+					</div>
+				</div>
+				<div class="fd_com_linebreak">onselectfilter -> Action method which receives selected menu as callback value</div>
+			</div>
+		</div>
+		<div class="fd_com_subheader"><h4>Demo</h4></div>
+		<div><b>Return Value: </b> <span id="fd_callbackvalue"></span></div>
+		<br>
+	</div>
+	<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
+  {{menu-filter menuvalues=model.stateFilterValues onselectfilter='setStateFilter' selected=model.stateFilerLabel }}
+  <div style="height:300px;"></div>
+</div>
+</div>	
