@@ -1,0 +1,41 @@
+.input_tager_wrapper {
+border:1px solid #CCC;
+min-height: 20px;
+padding: 7px;
+}
+.input_tager_wrapper input {
+border:none;
+outline: 0;
+height: 100%;
+min-width: 100px;
+}
+.com_tag_wrapper {
+border: 1px solid #CCC;
+padding: 1px 6px;
+margin: 2px;
+display: inline-block;
+border-radius: 4px;
+font-size: 16px;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+.com_tag_wrapper>div {
+display: inline-block;
+vertical-align: middle;
+}
+.com_tag_wrapper>div:first-child {
+font-size: 14px;
+color: #515151;
+cursor: pointer;
+margin-right: 5px;
+margin-top: -1px;
+}
+.scalezero {
+-webkit-transform: scale(0);
+-moz-transform: scale(0);
+transform: scale(0);
+}
+.input_tager {
+	display: inline-block;
+}

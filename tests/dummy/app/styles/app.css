@@ -80,87 +80,14 @@ color:#05674b;
 .fd_com_linebreak {
 	margin-bottom: 10px;
 }
-
-
-.input_tager_wrapper {
-border:1px solid #CCC;
-min-height: 20px;
-padding: 7px;
+.app_dependency_dropdown {
+  margin-bottom: 10px;
 }
-.input_tager_wrapper input {
+.form-control {
+height: auto;
+padding: 0px;
 border:none;
-outline: 0;
-height: 100%;
-min-width: 100px;
 }
-.com_tag_wrapper {
-border: 1px solid #CCC;
-padding: 1px 6px;
-margin: 2px;
-display: inline-block;
-border-radius: 4px;
-font-size: 16px;
--webkit-transition: all 0.2s ease;
--moz-transition: all 0.2s ease;
-transition: all 0.2s ease;
-}
-.com_tag_wrapper>div {
-display: inline-block;
-vertical-align: middle;
-}
-.com_tag_wrapper>div:first-child {
-font-size: 14px;
-color: #515151;
-cursor: pointer;
-margin-right: 5px;
-margin-top: -1px;
-}
-.scalezero {
--webkit-transform: scale(0);
--moz-transform: scale(0);
-transform: scale(0);
-}
-.input_tager {
-	display: inline-block;
-}
-/*Below the css style is for TABS DEFAULT component*/
-ul.header-tabs {
-  list-style: none;
-}
-ul.header-tabs li {
-  float: left;
-  position: relative;
-  padding-top: 1px;
-  background: #ccc;
-}
-ul.header-tabs li a {
-  position: relative;
-  z-index: 5;
-  text-decoration: none;
-  color: #ffffff;
-  text-align: center;
-  display: block;
-  padding: 8px 20px;
-  font-size: 13px;
-  font-weight: 500;
-}
-ul.header-tabs li a:hover {
-  background: #009196;
-}
-ul.header-tabs li.active a, ul.header-tabs li.active a:hover {
-  border-color: #002f30;
-  background: #fff;
-  color: #000000;
-}
-/* Styles for alphabet filter*/
-.alphabet_filter_holder li {
-	display: inline-block;
-}
-
-
-
-//abid css
-
   .button{
     position: relative;
     width:120px;
