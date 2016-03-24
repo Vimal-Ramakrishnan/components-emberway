@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import toggleButton from 'ember-bootstrap/components/bs-dropdown-button';
+
 
 var myObj = [
 		{
@@ -15,12 +15,10 @@ var myObj = [
 export default Ember.Route.extend({
 	actions: {
 		doSubmitAction: function(selectionValue) {
-			console.log(selectionValue);
 			$('#fd_callbackvalue').html(selectionValue);
 		},
 	},
 	model() {
-		console.log("check this",myObj);
 		return myObj;
 	}
 });

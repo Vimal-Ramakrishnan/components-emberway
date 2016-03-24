@@ -96,7 +96,7 @@ var ticketModel = {
 	subcategory1:null,
 	item1:null,
 	componentData:data
-}
+};
 export default Ember.Route.extend({
 	model() {
 		return ticketModel;
