@@ -19,6 +19,7 @@
       height:20px;
       width:90px;
     }
+
     .container{
       width: 100%;
       border-radius: 5px;
@@ -74,6 +75,18 @@
     }
     .failed{
       color:#ff4c4c;
+    }
+    input[type="file"]:hover{
+      cursor:pointer;
+    }
+    a:hover {
+     cursor:pointer;
+    }
+    span:hover{
+     cursor:pointer;
+    }
+    .glyphicon-remove{
+      color:#999999;
     }
     span.message{
       font-size: 12px;

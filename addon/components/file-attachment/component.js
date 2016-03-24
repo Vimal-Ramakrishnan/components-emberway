@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   multiple: true,
   upload: false,
   deleteUrl: null,
-  allowSize: 1 * 1024 * 1024,
+  allowSize: 15 * 1024 * 1024,
   uploading: false,
   progress: 0,
   value: null,

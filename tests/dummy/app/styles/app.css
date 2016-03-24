@@ -111,6 +111,10 @@ position: absolute;
     height:20px;
     width:90px;
   }
+  .btn-upload-file:hover{
+    cursor:pointer;
+  }
+
   .container{
     width: 100%;
     border-radius: 5px;
@@ -166,13 +170,20 @@ position: absolute;
     color: green;
   }
   .failed{
-    color:red;
-
+    color:#ff4c4c;
   }
   span.message{
     margin-left: 10%;
   }
-
+  input[type="file"]:hover{
+    cursor:pointer;
+  }
+  a:hover {
+   cursor:pointer;
+  }
+  .glyphicon-remove{
+    color:#999999;
+  }
   .input-container{
     position:relative;
   }
