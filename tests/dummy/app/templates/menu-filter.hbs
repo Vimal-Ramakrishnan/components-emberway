@@ -24,16 +24,13 @@
 						<pre>
 stateFilterValues:[{label:"Verified",value:"verified"},{label:"Unverified",value:"unverified"},{label:"All",value:"all"},{label:"Deleted",value:"deleted"},{label:"Blocked",value:"blocked"}],
 
-stateFilerLabel: Ember.computed("stateFilter",function(){
-var array=this.stateFilterValues,len=array.length,filterValue=this.stateFilter,resul=null;
-for(var i=0;i&#60;len;i++){
-	if(array[i].value==filterValue) {
-		resul=array[i];
-		break;
+stateFilerLabel: "Unverified"
+
+actions:{
+	    setStateFilter:function(value){
+	    	//update the state and reload the corresponding view or component(table view)
+	    }
 	}
-}
-return resul?resul.label:filterValue;
-});
 						</pre>
 					</div>
 				</div>
@@ -41,11 +38,12 @@ return resul?resul.label:filterValue;
 			</div>
 		</div>
 		<div class="fd_com_subheader"><h4>Demo</h4></div>
-		<div><b>Return Value: </b> <span id="fd_callbackvalue"></span></div>
+		<div><b>Return Value: </b> <span id="fd_callbackvalue">unverified</span></div>
 		<br>
+			<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
+		  	{{menu-filter menuvalues=model.stateFilterValues onselectfilter='setStateFilter' selected=model.stateFilerLabel }}
+		  <div style="height:300px;"></div>
 	</div>
-	<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
-  {{menu-filter menuvalues=model.stateFilterValues onselectfilter='setStateFilter' selected=model.stateFilerLabel }}
-  <div style="height:300px;"></div>
+
 </div>
 </div>

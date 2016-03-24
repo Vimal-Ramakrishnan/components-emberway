@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 	maintabs:[
 	    {label:"Dashboard",toroute:"index", disabled:false },
 	    {label:"Tickets",toroute:"index",disabled:false},
-	    {label:"Social",toroute:"index",disabled:false},
+	    {label:"Social",toroute:"tabs-default",disabled:false},
 	    {label:"Solutions",toroute:"index",disabled:false},
 	    {label:"Forums",toroute:"index",disabled:false},
 	    {label:"Customers",toroute:"index",disabled:false},

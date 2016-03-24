@@ -18,7 +18,9 @@
         <div class="fd_com_sytax fd_com_block">
             <div class="fd_com_subheader"><h4>Component Properties</h4></div>   
             <div class="fd_com_subcontent">
-                <div class="fd_com_linebreak">Model -> Array of objects which contains tab-data and class name for the parent[CSS styling]</div>
+                <div class="fd_com_linebreak">Model -> Array of objects which contains tab-data and class name for the parent[CSS styling] if not given bootstrap default tab style will be used<br>
+                Role based checking and I18n stuffs can be handle in controller itself.
+                </div>
                 <div class="fd_com_subcontent fd_com_linebreak">
                     <div class="fd_com_linebreak">
 <pre>
@@ -42,5 +44,6 @@ maintabs_opts: {
         </div>
         <div class="fd_com_subheader"><h4>Demo</h4></div>
          {{tabs-default  model.maintabs model.maintabs_opts}}
+         <br><Br>
     </div>  
 </div> 
