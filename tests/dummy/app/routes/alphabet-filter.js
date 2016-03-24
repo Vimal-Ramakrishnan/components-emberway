@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	alfaFilter:  "All",
+	alfaFilter:  "B",
 	actions: {
 		setAlfaFilter: function(value) {
 			$('#fd_callbackvalue').html(value);
 		},
 	},
 	model() {
-		return this.alfaFilter;
+		return {alfaFilter:"B"};
 	}
 });

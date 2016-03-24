@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         return false;
     },
    didInsertElement: function() {
-   		this._super(...arguments);
+   	this._super(...arguments);
      	this.$().find('#'+this.selected).addClass("active");
    }  
 });

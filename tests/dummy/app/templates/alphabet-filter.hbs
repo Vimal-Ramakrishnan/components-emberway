@@ -18,15 +18,14 @@
 						<pre>
 Controller
 ===========
-alfaFilter:  "All",
+alfaFilter:  "B",
 actions: {
 	setAlfaFilter: function(value) {
+                //Update the state here and reload the corresponding component say table 
 		console.log("check this value",value);
 	},
-},
-model() {
-	return this.alfaFilter;
 }
+
 						</pre>
 					</div>
 				</div>
@@ -34,10 +33,10 @@ model() {
 			</div>
 		</div>
 		<div class="fd_com_subheader"><h4>Demo</h4></div>
-		<div><b>Return Value: </b> <span id="fd_callbackvalue"></span></div>
+		<div><b>Return Value: </b> <span id="fd_callbackvalue">B</span></div>
 		<br>
 	</div>
 	<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
-  		{{alphabet-filter onselectfilter='setAlfaFilter' selected=alfaFilter }}
+  		{{alphabet-filter onselectfilter='setAlfaFilter' selected=model.alfaFilter }}
 	</div>
 </div>	

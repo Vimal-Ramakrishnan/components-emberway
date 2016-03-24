@@ -13,12 +13,15 @@ text-decoration: none;
 color: #909090;
 padding: 0 4px 0 4px;
 margin-left: 2px;
+border-radius:3px;
 }
 .alpha_sort_list li a:hover {
 background: #ccc;
 color: #333;
+border-radius:3px;
 }
 .alpha_sort_list li.active a{
 background: #888;
 color: #FFF; 
+border-radius:3px;
 }
