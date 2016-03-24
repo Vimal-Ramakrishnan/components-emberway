@@ -1,6 +1,18 @@
 # Ember-fduicomponents
 
-This README outlines the details of collaborating on this Ember addon.
+  Ember addon which contains generic components.
+  
+## List of Components Present
+
+* Split Button Dropdown
+* Dependecy Dropdown
+* Multiple Input Selector
+* Tabs Default
+* Alphabet Filter
+* Menu Filter
+* File Attachment
+* Avatar Upload
+
 
 ## Installation
 
