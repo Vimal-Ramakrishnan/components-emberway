@@ -21,6 +21,10 @@
   color:#FFF;
   padding:15px 0px 15px 25px;
   }
+  .fd_header a, .fd_header a:active, .fd_header a:visited {
+    color:#fff;
+    text-decoration: none;
+  }
   .fd_header_title {
   font-size: 23px;
   }
@@ -41,7 +45,7 @@ position: absolute;
   color:#05674b;
   padding-left: 10px;
   }
-  .fd_ui_componentslist a,.fd_ui_componentslist a:active,.fd_ui_componentslist a:visited {
+  .fd_ui_componentslist a,.fd_ui_componentslist a:active,.fd_ui_componentslist a:visited,.fd_com_subcontent ul li a,.fd_com_subcontent ul li a:active,.fd_com_subcontent ul li a:visited {
   color:#05674b;
   }
   .fd_ui_component_content {
@@ -61,6 +65,7 @@ position: absolute;
   }
   .fd_com_content {
   color:#05674b;
+  margin-bottom: 50px;
   }
   .fd_com_block {
   margin-bottom: 25px;

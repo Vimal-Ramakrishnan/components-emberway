@@ -40,9 +40,10 @@ actions:{
 		<div class="fd_com_subheader"><h4>Demo</h4></div>
 		<div><b>Return Value: </b> <span id="fd_callbackvalue">unverified</span></div>
 		<br>
+			<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
+		  	{{menu-filter menuvalues=model.stateFilterValues onselectfilter='setStateFilter' selected=model.stateFilerLabel }}
+		  <div style="height:300px;"></div>
 	</div>
-	<div style="margin-top:-8px;margin-bottom: 6px;" id="company_sub_header" class="row-fluid list-page-subheader">
-  {{menu-filter menuvalues=model.stateFilterValues onselectfilter='setStateFilter' selected=model.stateFilerLabel }}
-  <div style="height:300px;"></div>
+
 </div>
 </div>	
