@@ -28,16 +28,16 @@
     <span>+ Attach a File</span>
     </a>
     {{#if uploading}}
-    <span class="success">  Uploading..({{progress}}%)</span>
+    <span class="success message">  Uploading..({{progress}}%)</span>
     {{/if}}
     {{#if uploadComplete}}
-    <span class="success">  Success <i class='glyphicon glyphicon-ok-circle'></i></span>
+    <span class="success message">  Success <i class='glyphicon glyphicon-ok-circle'></i></span>
     {{/if}}
     {{#if uploadFailed}}
-    <span class="failed"> Upload Failed <i class='glyphicon glyphicon-exclamation-sign'></i></span>
+    <span class="failed message"> Upload Failed <i class='glyphicon glyphicon-exclamation-sign'></i></span>
     {{/if}}
     {{#if error}}
-    <span class="failed">
+    <span class="failed message">
        {{error}}
       <i class="glyphicon glyphicon-remove-circle"{{action 'removeError'}}></i>
 

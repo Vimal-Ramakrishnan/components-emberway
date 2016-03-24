@@ -1,10 +1,6 @@
 import Ember from 'ember';
 import layout from './template';
 
-const {
-  on
-} = Ember;
-
 export default Ember.Component.extend({
   layout,
   files: Ember.computed({
@@ -32,13 +28,11 @@ export default Ember.Component.extend({
     onFileUploadSuccess: function(data){
       this.set('imageIsThere', true);
       this.set('fileUploadUrl', data.files[0].url);
-      console.log(data.files[0].url);
     },
 
     previewImage: function(data){
       if( this.get('upload') && this.get('imageIsThere')){
         document.getElementById(this.get('id')).setAttribute('src', this.get('fileUploadUrl'));
-        console.log(this.get('fileUploadUrl'));
       }else{
        document.getElementById(this.get('id')).setAttribute('src', data);
        this.set('imageIsThere', true);
