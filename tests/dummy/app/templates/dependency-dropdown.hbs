@@ -8,7 +8,7 @@
 			<div class="fd_com_subcontent">
 				<div><code>&#123;&#123;dependency-dropdown</code></div>
 
-				<div><code>dependencyList=model</code></div>
+				<div><code>dependencyList=viewData</code></div>
 				
 				<div><code>primaryPlaceholder="Select user name"</code></div>
 				<div><code>searchOption=false</code></div>
@@ -37,7 +37,7 @@
 				<div class="fd_com_subcontent fd_com_linebreak">
 					<div class="fd_com_linebreak">
 <pre>
-var data = [
+var viewData = [
 	{
 		id:1,
 		text:"Feature Request",
@@ -152,6 +152,14 @@ var data = [
 					<div class="fd_com_subcontent">If return value is <span><b>object</b></span> model will contain the result of selected <span><b>Object</b></span></div> 
 					<div class="fd_com_subcontent">If return value is <span><b>id</b></span> model will contain the result of selected <span><b>Object.ID</b></span></div> 
 				</div>
+			</div>
+		</div>
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Dependencies</h4></div>	
+			<div class="fd_com_subcontent">
+				<div class="fd_com_linebreak">Install below the list of requirements to run this component</div>
+				<div>Bootstarp -> ember install ember-bootstrap</div>
+				<div>select2 -> ember install ember-select-2</div>
 			</div>
 		</div>
 		<div class="fd_com_subheader"><h4>Demo</h4></div>
