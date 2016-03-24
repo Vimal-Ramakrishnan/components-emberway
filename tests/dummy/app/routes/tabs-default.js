@@ -15,10 +15,10 @@ export default Ember.Route.extend({
         ul_class:"header-tabs"
     },
     model: function() {
-    	var resultObj = {}
+    	var resultObj = {};
     	resultObj.maintabs = this.maintabs;
     	resultObj.maintabs_opts = this.maintabs_opts;
         console.log(resultObj);
     	return resultObj;
-    }
+    },
 });
