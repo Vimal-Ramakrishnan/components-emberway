@@ -14,25 +14,47 @@
 * Avatar Upload
 
 
-## Installation
+## Documentaion & usage
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+we have created an app which contains the documentation on using all the components, to run it in local do : 
 
-## Running
+* git clone this repository
+* npm install
+* bower install
+* ember server
+* Visit your demo app at http://localhost:4200.
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Dependencies
 
-## Running Tests
+Need to install these depencies inorder for the components to work accordingly
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+  * "bootstrap": "~3.3.5"
+  * "jquery-file-upload": "9.10.0"
+  * "select2": "3.5.2"
+  
+after installation import all these dependencies in your __/ember-cli-build.js__
 
-## Building
+    app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+    app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
+    app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+    app.import("bower_components/jquery-file-upload/js/vendor/jquery.ui.widget.js");
+    app.import("bower_components/jquery-file-upload/js/jquery.fileupload.js");
+  
+  
+  
 
-* `ember build`
+## Errors and further
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+if there are content security policy errors, in your __/config/environment.js__ add these inside EmberENV:
+
+    contentSecurityPolicy: {
+      'default-src': ["'none'"],
+      'script-src':  ["'self'"],
+      'font-src':    ["'self'"],
+      'connect-src': ["'self'"],
+      'img-src':     ["'self'"],
+      'style-src':   ["'self'"],
+      'media-src':   ["'self'"]
+    } 
+
+
