@@ -6,7 +6,14 @@
 		<div class="fd_com_sytax fd_com_block">
 			<div class="fd_com_subheader"><h4>Component Syntax</h4></div>	
 			<div class="fd_com_subcontent">
-				<code>&#123;&#123;split-button-dropdown defaultValue="Submit" subMenu=model ontrigger="doSubmitAction"&#125;&#125;</code>
+				<code>&#123;&#123;split-button-dropdown defaultValue="Submit" subMenu=viewData ontrigger="doSubmitAction"&#125;&#125;</code>
+			</div>
+		</div>
+		<div class="fd_com_sytax fd_com_block">
+			<div class="fd_com_subheader"><h4>Component Dependencies</h4></div>	
+			<div class="fd_com_subcontent">
+				<div class="fd_com_linebreak">Install below the list of requirements to run this component</div>
+				<div>Bootstarp -> ember install ember-bootstrap</div>
 			</div>
 		</div>
 		<div class="fd_com_sytax fd_com_block">
@@ -17,7 +24,7 @@
 				<div class="fd_com_subcontent fd_com_linebreak">
 					<div class="fd_com_linebreak">
 						<pre>
-eg : var model = [
+eg : var viewData = [
 	{
 		list_key:"sample_1",
 		list_value:"Create One"
