@@ -9,7 +9,7 @@
         <code>&#123;&#123;avatar-upload
         upload='true'
         url='/avatar'
-        preview=true&#125;&#125;</code>
+        value=model.avatar&#125;&#125;</code>
       </div>
     </div>
     <div class="fd_com_sytax fd_com_block">
@@ -17,6 +17,8 @@
       <div class="fd_com_subcontent">
         <div class="fd_com_linebreak">upload = (true/false) when true the files will be uploaded to the server</div>
         <div class="fd_com_linebreak">url = the url end point to which the file to be uploaded</div>
+        <div class="fd_com_linebreak">value = if upload is false it contains the image object, if upload is true it contains the json response form the server.</div>
+        <div class="fd_com_linebreak">id = id of the image tag in the parent.</div>
         <div class="fd_com_linebreak">allowSize = the size of the files to be uploaded, default size per file is 5 MB</div>
         <div class="fd_com_linebreak">preview = (true/false) when true, image preview will be shown.</div>
         <div class="fd_com_linebreak">onFileUploadSuccess = action to the parent, to handle when the file upload is successful</div>
@@ -26,7 +28,7 @@
     </div>
     <div class="fd_com_subheader"><h4>Demo :</h4></div>
   </div>
-  <img id="avatar-image" src='' class='image'>
+  <img id="avatar-image" src='https://assets1.freshdesk.com/assets/misc/profile_blank_medium.jpg' class='image'>
   {{avatar-upload
   url='https://jquery-file-upload.appspot.com/'
   preview=true

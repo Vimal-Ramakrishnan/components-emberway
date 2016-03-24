@@ -18,6 +18,7 @@ export default Ember.Component.extend({
   allowSize: 1 * 1024 * 1024,
   uploading: false,
   progress: 0,
+  value: null,
   uploadComplete: false,
   uploadFailed: false,
   allowSizeError: 'Maximum file upload size limit reached, File cannot be uploaded',
@@ -44,12 +45,14 @@ export default Ember.Component.extend({
       this.convertFileSize(data);
       $this.get('files').pushObject(...data);
       $this.set('error', null);
+      $this.set('value', $this.get('files'));
       }
     },
 
     onFileUploadSuccess: function(data){
       this.convertFileSize(data.files);
       this.get('files').pushObject(...data.files);
+      this.set('vaule', data);
       this.set('deleteUrl', data.files[0].deleteUrl);
       if(this.get('files').length>0){
         this.set('uploadComplete', true);

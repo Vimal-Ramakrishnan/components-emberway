@@ -10,6 +10,7 @@
         upload='true'
         url='/attachments'
         multiple=true
+        value=model.attachments
         &#125;&#125;</code>
       </div>
     </div>
@@ -20,6 +21,8 @@
         <div class="fd_com_linebreak">url = the url end point to which the file to be uploaded</div>
         <div class="fd_com_linebreak">allowSize = the size of the files to be uploaded, default size per file is 15 mb</div>
         <div class="fd_com_linebreak">multiple = (true/false) when true, multiple files can be attached at once</div>
+        <div class="fd_com_linebreak">value = if upload is false it contains the array of file objects, if upload is true it contains the json response form the server</div>
+
         <div class="fd_com_linebreak">onFileUploadSuccess = action to the parent, to handle when the file upload is successful</div>
         <div class="fd_com_linebreak">onFail = action to the parent, to handle when the file upload failed</div>
         <div class="fd_com_linebreak">allowSizeError = Custom error, to be shown in case the file size is exceeded.</div>

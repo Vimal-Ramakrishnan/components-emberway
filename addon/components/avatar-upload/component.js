@@ -13,6 +13,7 @@ export default Ember.Component.extend({
   upload: false,
   id: null,
   url:null,
+  vaule: null,
   progress: 0,
   errorMessage: null,
   fileUploadUrl: null,
@@ -23,11 +24,13 @@ export default Ember.Component.extend({
     onFileUploadAdd: function(data){
       this.set('fileUploadUrl', null);
       this.set('imageIsThere', false);
+      this.set('value', data);
     },
 
     onFileUploadSuccess: function(data){
       this.set('imageIsThere', true);
       this.set('fileUploadUrl', data.files[0].url);
+      this.set('value', data);
     },
 
     previewImage: function(data){
