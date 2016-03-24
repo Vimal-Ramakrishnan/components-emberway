@@ -57,7 +57,6 @@ export default Ember.TextField.extend({
             totalSize += e.size;
           });
           if(totalSize > $this.allowSize) {
-            console.log('allowsize error');
             $this.sendAction('error', $this.allowSizeError);
             return false;
           }

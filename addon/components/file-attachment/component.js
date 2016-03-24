@@ -44,7 +44,6 @@ export default Ember.Component.extend({
       this.convertFileSize(data);
       $this.get('files').pushObject(...data);
       $this.set('error', null);
-      console.log('allowsize',this.get('allowSize'));
       }
     },
 
