@@ -32,8 +32,9 @@
   position: relative;
   }
   .fd_ui_componentslist {
-  width: 250px;
-  padding: 20px 20px 20px 0px;
+width: 250px;
+padding: 20px 20px 20px 0px;
+position: absolute;
   }
   .fd_ui_componentslist ul li {
   margin-bottom: 7px;
@@ -44,11 +45,7 @@
   color:#05674b;
   }
   .fd_ui_component_content {
-  position: absolute;
-    top: 0px;
-    bottom: 0;
-    right: 0;
-    left: 250px;
+     margin-left: 250px;
   }
   .fd_ui_com_holder {
   padding: 10px 25px;
