@@ -1,8 +1,13 @@
   {{yield}}
   {{log error}}
   <div class="avatar-container">
-  <div class="input-container">
-
+  <a href="javascript:;" class="option uplink">
+  <span class="input-container">
+  {{#if imageIsThere}}
+  <span class="avatar-text">Change</span>
+  {{else}}
+  <span class="avatar-text">Add Avatar</span>
+  {{/if}}
   {{file-upload url=url
     preview=preview
     previewImage='previewImage'
@@ -15,15 +20,12 @@
     upload=upload
     error = 'error'
     tabindex='-1'}}
-  </div>
+  </span>
+  </a>
   {{#if imageIsThere}}
-  <a href='javascript:;'>
-  <span>Change Avatar</span>
-  </a>
-  {{else}}
-  <a href='javascript:;'>
-  <span>Add Avatar</span>
-  </a>
+  <div  {{action 'clearImage'}} style="display:inline">
+  <span class="input-container remove">Remove</span>
+  </div>
   {{/if}}
   </div>
 

@@ -1,8 +1,6 @@
 import Ember from 'ember';
 import layout from './template';
 
-
-
 export default Ember.Component.extend({
   layout,
   files: Ember.computed({
@@ -50,18 +48,21 @@ export default Ember.Component.extend({
     },
 
     onFileUploadSuccess: function(data){
-      this.convertFileSize(data.files);
-      this.get('files').pushObject(...data.files);
-      this.set('vaule', data);
-      this.set('deleteUrl', data.files[0].deleteUrl);
-      if(this.get('files').length>0){
-        this.set('uploadComplete', true);
-        this.set('uploadFailed', false);
+      var $this = this;
+      $this.convertFileSize(data.files);
+      $this.get('files').pushObject(...data.files);
+      $this.set('vaule', data);
+      $this.set('deleteUrl', data.files[0].deleteUrl);
+      if($this.get('files').length>0){
+        $this.set('uploadComplete', true);
+        $this.set('uploadFailed', false);
       }
+      Ember.run.later((function() {
+        $this.set('uploadComplete', false);
+      }), 2000);
     },
 
     onFail: function(data){
-      console.log(data);
       this.set('uploadFailed', true);
     },
 

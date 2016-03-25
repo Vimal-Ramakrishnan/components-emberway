@@ -161,10 +161,17 @@ position: absolute;
     height:127px;
 
   }
+  a.uplink:hover{
+     text-decoration: none;
+     color:#337ab7;
+  }
+  .image-container{
+    width:500px;
+    margin:0 auto;
+  }
   .avatar-container{
     position:absolute;
     margin-top:15px;
-    margin-left:15px;
   }
   .success{
     color: green;

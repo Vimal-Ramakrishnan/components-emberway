@@ -1,15 +1,4 @@
-  .button{
-      position: relative;
-      width:120px;
-      border:none;
-      background-color:#fafafa;
-    }
-    .button:hover{
-      background-color:#fafafa;
-    }
-    .btn:focus{
-        outline: none;
-    }
+
     .btn-upload-file{
       position:absolute;
       z-index:2;
@@ -65,10 +54,35 @@
       width:127px;
       height:127px;
     }
-    .avatar-container{
-      position:absolute;
-      margin-top:15px;
+    .avatar-container.option.uplink{
+      cursor: default;
+    }
+    .avatar-container .option{
+      width:44%;
+      padding:2.5%;
+    }
+    .avatar-container .input-container{
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      line-height: 20px;
+    }
+    .avatar-container input[type=file] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    font-size: 10000px;
+    }
+    .remove{
       margin-left:15px;
+      color:#337ab7;
+    }
+    a.uplink:hover{
+       text-decoration: none;
+       color:#337ab7;
     }
     .success{
       color: green;
@@ -87,6 +101,9 @@
     }
     .glyphicon-remove{
       color:#999999;
+    }
+    .avatar-text-right{
+      margin-left:20px;
     }
     span.message{
       font-size: 12px;
