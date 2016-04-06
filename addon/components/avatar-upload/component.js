@@ -42,16 +42,16 @@ export default Ember.Component.extend({
       }
     },
 
-    error(message){
+    error: function(message){
       this.set('errorMessage', message);
     },
 
-    removeError(){
+    removeError: function(){
       this.set('errorMessage', null);
     },
 
-    clearImage(){
-      document.getElementById(this.get('id')).setAttribute('src', '');
+    clearImage: function(){
+      document.getElementById(this.get('id')).setAttribute('src', 'https://assets1.freshdesk.com/assets/misc/profile_blank_medium.jpg');
       this.set('imageIsThere', false);
     }
   }
