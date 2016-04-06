@@ -14,6 +14,7 @@ Router.map(function() {
 	this.route('alphabet-filter');
   	this.route('file-attachment');
   	this.route('avatar-upload');
+  	this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
